@@ -12,6 +12,9 @@ public class LaunchApplication {
 
         WebDriver drive=new ChromeDriver();
 
+        // doesn't open google because of the version
+        drive.get("http://www.google.com");
+
 
 
     }

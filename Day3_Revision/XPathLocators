@@ -1,0 +1,53 @@
+https://selectorshub.com/xpath-practice-page/
+inspecting Enter e-mail
+
+XPath:
+
+// right click and copy>copy full xpath for absolute
+A) Absolute XPath  [/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input]
+
+B) Relative Xpath [custom path] :
+
+   1. //tagName[@attributeName='value']
+
+      //input[@placeholder='Enter email']
+      //input[@id='userId'and @title='Email']
+      //input[@class='selectors-input jsSelector' and @title='Email']
+
+
+   2. //tagName[text()='InnerText']
+
+   3. //tagName[contains(@attribute,'value')]     .. can use attributeName or text , so it's combination of first two
+
+      //input[contains(@id,'userId')]
+      //input[contains(@placeholder,'Enter ')]
+      //input[contains(@placeholder,'Enter ') and @id='userId']
+
+   4. //tagName[contains(text(), 'innerText')]
+
+      //h3[contains(text(),'Useful Links')]
+
+Example.
+ *** write XPath with tagName input and has attribute type , and has value abc
+      //input[@type=‘abc’]
+
+Example.
+ *** write xPath where  we don't have the name of attribute but we know it's value userId , we use *
+      //input[@*='userId']
+
+Example.
+ *** find a text when STARTS WITH amazon
+      //a[starts-with(text(),'Amazon')]
+
+Example.
+*** find webElement by Index
+   (//input[@class='form-control'])[2]
+
+
+https://www.flipkart.com/
+inspect search symbol
+Example.
+*** when we have tagName SVG  , when normal XPath won't work , always use //*
+   //*[local-name()='svg']//*[name()='g']
+
+
